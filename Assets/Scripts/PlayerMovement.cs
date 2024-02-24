@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -114,19 +115,39 @@ public class PlayerMovement : MonoBehaviour
 		});
 	}
 
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		
-		if (other.CompareTag ("LevelEnd")) {
-			transform.DORotate (Vector3.zero, 1f);
-			Destroy (other.gameObject);
-			Debug.Log ("Win");
+	 void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("LevelEnd"))
+        {
+            transform.DORotate(Vector3.zero, 1f);
+						
 
-			int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-			
+            Destroy(other.gameObject);
 
-			if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
-				SceneManager.LoadSceneAsync (++currentLevelIndex);
-		}
-	}
+            StartCoroutine(DelayedSceneLoad());
+        }
+    }
+
+    IEnumerator DelayedSceneLoad()
+    {
+
+        yield return new WaitForSeconds(1f);
+
+				string gameMode = LoadGameData.getGameMode();
+
+        int currentLevelIndex = gameMode == "Default"? LoadGameData.getCurrentLevel() : LoadGameData.getActiveLevel();
+				Debug.Log(currentLevelIndex);
+
+        if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
+        {
+					if(gameMode == "Default"){
+						SaveGameData.setCurrentLevel(++currentLevelIndex);
+            SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());
+					}
+					else if(gameMode == "LevelSelect"){
+						SaveGameData.setActiveLevel(++currentLevelIndex);
+            SceneManager.LoadSceneAsync(LoadGameData.getActiveLevel());
+					}
+        }
+    }
 }
