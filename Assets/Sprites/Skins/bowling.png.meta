@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bowling_0: -3700676018718914245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

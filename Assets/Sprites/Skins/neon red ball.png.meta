@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51003e90479ad214194868cbbfc0d814
+guid: aab8d00bb1bad884bbfa731c95df6cc0
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neon red ball_0: -2948018418252758505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

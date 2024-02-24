@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43e2b9de2ec3a4643928a8d84cad5101
+guid: de70140c105ec2543afc0abb55b1c568
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      planet ball_0: 4258942968783377822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

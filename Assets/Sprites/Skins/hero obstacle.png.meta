@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hero obstacle_0: -2054378613454918325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
