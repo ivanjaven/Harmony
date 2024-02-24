@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class AxeSwing : MonoBehaviour
+public class ObstacleAxe : MonoBehaviour
 {
     [SerializeField] float swingAngle = 45f; // Half of the desired total swing angle (since it's a yoyo loop)
     [SerializeField] float swingDuration = 1f;
