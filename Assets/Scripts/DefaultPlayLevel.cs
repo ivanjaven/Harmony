@@ -15,6 +15,7 @@ public class DefaultPlayLevel : MonoBehaviour
     public void OpenScene(){
         SaveGameData.setGameMode("Default");
         SaveGameData.setCurrentLevel(1);
+        SaveGameData.setUnlockedLevel(1);
         SceneManager.LoadScene("level" + LoadGameData.getCurrentLevel());
     }
 }

@@ -144,8 +144,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
         {
-					if(gameMode == "Default"){
+					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){
 						SaveGameData.setCurrentLevel(++currentLevelIndex);
+						SaveGameData.setUnlockedLevel(currentLevelIndex);
             SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());
 					}
 					else if(gameMode == "LevelSelect"){

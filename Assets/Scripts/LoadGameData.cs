@@ -14,4 +14,7 @@ public class LoadGameData : MonoBehaviour
     public static string getGameMode(){
         return PlayerPrefs.GetString("mode");
     }
+    public static int getUnlockedLevel(){
+        return PlayerPrefs.GetInt("UnlockedLevel");
+    }
 }

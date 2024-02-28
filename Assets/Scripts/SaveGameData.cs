@@ -17,4 +17,7 @@ public class SaveGameData : MonoBehaviour
     public static void setGameMode(String mode){
         PlayerPrefs.SetString("mode", mode);
     }
+    public static void setUnlockedLevel(int level){
+        PlayerPrefs.SetInt("UnlockedLevel", level);
+    }
 }
