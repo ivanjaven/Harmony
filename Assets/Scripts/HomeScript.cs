@@ -16,8 +16,6 @@ public class HomeScript : MonoBehaviour
         LevelSelector.SetActive(false);
         Settings.SetActive(false);
         Shop.SetActive(false);
-
-
     }
  
 }

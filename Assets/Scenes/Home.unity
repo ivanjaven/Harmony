@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 1634696}
   - component: {fileID: 1634695}
   m_Layer: 5
-  m_Name: Level (17)
+  m_Name: Level (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1491,7 +1491,7 @@ GameObject:
   - component: {fileID: 320696122}
   - component: {fileID: 320696121}
   m_Layer: 5
-  m_Name: Level (15)
+  m_Name: Level (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2052,7 +2052,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 408725125}
-  - component: {fileID: 408725126}
   - component: {fileID: 408725127}
   m_Layer: 5
   m_Name: Shop
@@ -2084,18 +2083,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.00048828}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &408725126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408725124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b73f25a47a303f4e9ecf172f27061d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &408725127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3747,7 +3734,7 @@ GameObject:
   - component: {fileID: 740390895}
   - component: {fileID: 740390894}
   m_Layer: 5
-  m_Name: Level (14)
+  m_Name: Level (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5517,7 +5504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eac69ee5689e7148b0ced15b6911aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 4
   LevelSelector: {fileID: 1414158527}
   Settings: {fileID: 1742569313}
   Shop: {fileID: 408725124}
@@ -5700,6 +5686,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b73f25a47a303f4e9ecf172f27061d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 455623323}
+  - {fileID: 1949843888}
+  - {fileID: 2080252409}
+  - {fileID: 1788991871}
+  - {fileID: 2102163915}
+  - {fileID: 1467128599}
+  - {fileID: 1861971792}
+  - {fileID: 1724341316}
+  - {fileID: 1903248905}
+  - {fileID: 228454460}
+  - {fileID: 372673166}
+  - {fileID: 2104240377}
+  - {fileID: 1627100278}
+  - {fileID: 740390895}
+  - {fileID: 320696122}
+  - {fileID: 2132070042}
+  - {fileID: 1634696}
 --- !u!1 &1422797042
 GameObject:
   m_ObjectHideFlags: 0
@@ -6971,7 +6975,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1742569315}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LevelSelectionManager, Assembly-CSharp
         m_MethodName: OnClickBack
         m_Mode: 1
@@ -7313,7 +7317,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1742569314}
-  - component: {fileID: 1742569315}
   - component: {fileID: 1742569316}
   m_Layer: 5
   m_Name: Settings
@@ -7351,18 +7354,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.00048828}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1742569315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742569313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b73f25a47a303f4e9ecf172f27061d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1742569316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9109,7 +9100,7 @@ GameObject:
   - component: {fileID: 2132070042}
   - component: {fileID: 2132070041}
   m_Layer: 5
-  m_Name: Level (16)
+  m_Name: Level (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

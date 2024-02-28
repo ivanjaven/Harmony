@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] CircleCollider2D redBallCollider;
 	[SerializeField] CircleCollider2D blueBallCollider;
 
+	[SerializeField] CircleCollider2D playerCollider;
+
 	[SerializeField] float speed;
 	[SerializeField] float rotationSpeed;
 
@@ -89,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
 	public void Restart ()
 	{
+		playerCollider.enabled = false;
 		redBallCollider.enabled = false;
 		blueBallCollider.enabled = false;
 		rb.angularVelocity = 0f;
@@ -106,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
 			.SetEase (Ease.OutFlash)
 
 			.OnComplete (() => {
+				playerCollider.enabled = true;
 			redBallCollider.enabled = true;
 			blueBallCollider.enabled = true;
 

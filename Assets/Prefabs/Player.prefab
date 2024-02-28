@@ -5468,7 +5468,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 1
@@ -5522,6 +5522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redBallCollider: {fileID: 1792761862524416470}
   blueBallCollider: {fileID: 966537888231942600}
+  playerCollider: {fileID: 7002766834624417833}
   speed: 3
   rotationSpeed: 170
 --- !u!1 &7699531027419250956
