@@ -189,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114055893206264584, guid: 7ecbdf08324cd2e4297a150bea0cd530, type: 3}
       propertyPath: slideDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 212559841783883540, guid: 7ecbdf08324cd2e4297a150bea0cd530, type: 3}
       propertyPath: m_Size.x
