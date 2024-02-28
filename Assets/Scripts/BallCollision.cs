@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class BallCollision : MonoBehaviour
+public class BallCollision : MonoBehaviour // This script is use to add explosion animation effect on collision
 {
-	ParticleSystem explosionFx;
+	ParticleSystem explosionFx; //Use unity built in particle system
 	int ballIndex;
 
 	void Start ()
@@ -13,13 +13,10 @@ public class BallCollision : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		if (other.collider.CompareTag ("Obstacle")) {
-			GameManager.Instance.isGameover = true;
-
-			explosionFx.Play ();
-			Splatters.Instance.AddSplatter (other.transform, other.contacts [0].point, ballIndex);
-
-			PlayerMovement.Instance.Restart ();
+		if (other.collider.CompareTag ("Obstacle")) { //check if the ball collide on any obstacle
+			GameManager.Instance.isGameover = true; //save the state in game manager
+			explosionFx.Play (); // play the explosion effect
+			PlayerMovement.Instance.Restart (); // execute restart on playermovement
 		}
 	}
 }

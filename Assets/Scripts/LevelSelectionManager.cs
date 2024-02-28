@@ -6,24 +6,23 @@ using UnityEngine.UI;
 
 public class LevelSelectionManager : MonoBehaviour
 {
-    public static int currentLevel;
     public Button[] buttons;
 
     private void Awake()
     {
         int unlockedLevel;
-        if(PlayerPrefs.HasKey("UnlockedLevel")){
-            unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel");
+        if(PlayerPrefs.HasKey("UnlockedLevel")){ //Check if the unlockedlevel exists in playerprefs
+            unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel"); 
         }
-        else{
+        else{  // set it if it didn't exists
             PlayerPrefs.SetInt("UnlockedLevel", 1);
             unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel");
         }
     
-        for(int i = 0; i < buttons.Length; i++){
+        for(int i = 0; i < buttons.Length; i++){ // itterate through all the level buttons and assign it as not interactable
             buttons[i].interactable = false;
         }
-        for(int i = 0; i < unlockedLevel; i++){
+        for(int i = 0; i < unlockedLevel; i++){ // itterate through the count of unlocked levels to make all of it interactable
             buttons[i].interactable = true;
         }
     }
@@ -32,10 +31,9 @@ public class LevelSelectionManager : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public void OnClickLevel(int levelNumber){
-        currentLevel = levelNumber;
+    public void OnClickLevel(int levelNumber){ //load the level number passed by the button and save it as active level
         SaveGameData.setGameMode("LevelSelect");
         SaveGameData.setActiveLevel(levelNumber);
-        SceneManager.LoadScene("level" + currentLevel);
+        SceneManager.LoadScene("level" + levelNumber);
     }
 }

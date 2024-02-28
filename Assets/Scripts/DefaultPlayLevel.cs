@@ -1,7 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// using UnityEngine.SceneManagement;
+
 
 public class DefaultPlayLevel : MonoBehaviour
 {
@@ -12,10 +12,10 @@ public class DefaultPlayLevel : MonoBehaviour
         
     }
 
-    public void OpenScene(){
+    public void OpenScene(){ // When pressing play at home screen, the scene loaded was the latest level
         SaveGameData.setGameMode("Default");
-        SaveGameData.setCurrentLevel(1);
-        SaveGameData.setUnlockedLevel(1);
+        // SaveGameData.setCurrentLevel(1);
+        // SaveGameData.setUnlockedLevel(1);
         SceneManager.LoadScene("level" + LoadGameData.getCurrentLevel());
     }
 }

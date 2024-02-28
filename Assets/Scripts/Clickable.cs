@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Clickable : MonoBehaviour
+public class Clickable : MonoBehaviour // This class is use to fix the buttons default clicking treshold behavior
 {
     public float alphaTreshold = 0.1f;
     // Start is called before the first frame update
@@ -12,9 +12,5 @@ public class Clickable : MonoBehaviour
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = alphaTreshold;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

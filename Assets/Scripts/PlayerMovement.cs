@@ -110,8 +110,8 @@ public class PlayerMovement : MonoBehaviour
 
 			.OnComplete (() => {
 				playerCollider.enabled = true;
-			redBallCollider.enabled = true;
-			blueBallCollider.enabled = true;
+				redBallCollider.enabled = true;
+				blueBallCollider.enabled = true;
 
 			GameManager.Instance.isGameover = false;
 
@@ -119,32 +119,30 @@ public class PlayerMovement : MonoBehaviour
 		});
 	}
 
-	 void OnTriggerEnter2D(Collider2D other)
+	 void OnTriggerEnter2D(Collider2D other) // when the player reach the (white) levelend mark
     {
         if (other.CompareTag("LevelEnd"))
         {
             transform.DORotate(Vector3.zero, 1f);
 						
-
             Destroy(other.gameObject);
 
-            StartCoroutine(DelayedSceneLoad());
+            StartCoroutine(DelayedSceneLoad()); // start loading next scene with 1 second delay
         }
     }
 
     IEnumerator DelayedSceneLoad()
     {
 
-        yield return new WaitForSeconds(1f);
-
-				string gameMode = LoadGameData.getGameMode();
+        yield return new WaitForSeconds(1f); // delay time
+ 
+				string gameMode = LoadGameData.getGameMode(); //check the mode of game the player chose
 
         int currentLevelIndex = gameMode == "Default"? LoadGameData.getCurrentLevel() : LoadGameData.getActiveLevel();
-				Debug.Log(currentLevelIndex);
 
         if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
         {
-					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){
+					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
 						SaveGameData.setCurrentLevel(++currentLevelIndex);
 						SaveGameData.setUnlockedLevel(currentLevelIndex);
             SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());

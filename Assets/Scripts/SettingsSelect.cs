@@ -18,16 +18,6 @@ public class SettingsSelect : MonoBehaviour
         Shop.SetActive(false);
         SettingsSelector.SetActive(true);
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OnClickQuit(){
         Application.Quit();
