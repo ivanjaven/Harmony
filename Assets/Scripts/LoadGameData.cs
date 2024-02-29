@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LoadGameData : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static int getCurrentLevel(){ // get the data of current level (latest level)
         return PlayerPrefs.GetInt("currentLevel");
     }
