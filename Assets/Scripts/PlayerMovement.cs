@@ -140,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
 
         int currentLevelIndex = gameMode == "Default"? LoadGameData.getCurrentLevel() : LoadGameData.getActiveLevel();
 
+
         if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
         {
 					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
@@ -151,6 +152,6 @@ public class PlayerMovement : MonoBehaviour
 						SaveGameData.setActiveLevel(++currentLevelIndex);
             SceneManager.LoadSceneAsync(LoadGameData.getActiveLevel());
 					}
-        }
+        }	
     }
 }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1167301508209944}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4911, y: 11.1039, z: 0}
+  m_LocalPosition: {x: -0.5116, y: 11.1039, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 2.0278637, y: 0.6921882}
+  m_Size: {x: 2.8254843, y: 0.6921882}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -127,7 +127,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.43, y: 0.92}
-    newSize: {x: 2.0278637, y: 0.6921882}
+    newSize: {x: 2.8254843, y: 0.6921882}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 1
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc24da78c80a3c409d04a3984744273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDuration: 1
+  rotationDuration: 0.013
