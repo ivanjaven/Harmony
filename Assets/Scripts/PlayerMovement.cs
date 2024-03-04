@@ -138,7 +138,17 @@ public class PlayerMovement : MonoBehaviour
  
 				string gameMode = LoadGameData.getGameMode(); //check the mode of game the player chose
 
+				 
+				 // initial data if the game is newly installed
+				if(LoadGameData.getCurrentLevel() <= 1){
+					SaveGameData.setCurrentLevel(1);
+				}
+				if(LoadGameData.getActiveLevel() <= 1){
+					SaveGameData.setActiveLevel(1);
+				}
+
         int currentLevelIndex = gameMode == "Default"? LoadGameData.getCurrentLevel() : LoadGameData.getActiveLevel();
+				
 
 
         if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
