@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level02.unity
     guid: ddc03a011e2378d46b4852f08bea9627
   - enabled: 1
+    path: Assets/Scenes/Endless.unity
+    guid: ce0b798d14cddc843912640304a75782
+  - enabled: 1
     path: Assets/Scenes/level1.unity
     guid: 5e224dbac7d1de54085ee419af19f35a
   - enabled: 1

@@ -183,8 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectangle1: {fileID: 3661646365350487834}
   rectangle2: {fileID: 1417877137655377379}
-  closingSpeed: 7
-  reopenDelay: 3
+  closingSpeed: 3
+  reopenDelay: 2
 --- !u!61 &8001278360081207693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.21}
+  m_Offset: {x: 0, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

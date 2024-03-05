@@ -36,4 +36,8 @@ public class LevelSelectionManager : MonoBehaviour
         SaveGameData.setActiveLevel(levelNumber);
         SceneManager.LoadScene("level" + levelNumber);
     }
+
+    public void OnClickEndless(){
+        SceneManager.LoadScene("Endless");
+    }
 }

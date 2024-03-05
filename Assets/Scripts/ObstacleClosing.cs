@@ -42,6 +42,7 @@ public class RectangleClosing : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             isClosing = true;
+            Debug.Log("closing");
             StartCoroutine(ReopenRectanglesAfterDelay());
         }
     }
