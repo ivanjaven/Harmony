@@ -156,13 +156,15 @@ public class PlayerMovement : MonoBehaviour
         // if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
         // {
 					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
-						SaveGameData.setCurrentLevel(++currentLevelIndex);
-						SaveGameData.setUnlockedLevel(currentLevelIndex);
-            SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());
+						SaveGameData.setCurrentLevel(currentLevelIndex + 1);
+						SaveGameData.setUnlockedLevel(currentLevelIndex + 1);
+						if(gameMode != "LevelSelect")
+            	SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());
 					}
 					if(gameMode == "LevelSelect"){
-						SaveGameData.setActiveLevel(++currentLevelIndex);
-						SaveGameData.setUnlockedLevel(currentLevelIndex);
+						SaveGameData.setActiveLevel(currentLevelIndex + 1);
+						if(currentLevelIndex > LoadGameData.getUnlockedLevel())
+							SaveGameData.setUnlockedLevel(currentLevelIndex + 1);
             SceneManager.LoadSceneAsync(LoadGameData.getActiveLevel());
 					}
         // }	
