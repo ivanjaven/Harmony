@@ -138,6 +138,8 @@ public class PlayerMovement : MonoBehaviour
  
 				string gameMode = LoadGameData.getGameMode(); //check the mode of game the player chose
 
+				// gameMode ??= "Default";
+
 				 
 				 // initial data if the game is newly installed
 				if(LoadGameData.getCurrentLevel() <= 1){
@@ -149,19 +151,20 @@ public class PlayerMovement : MonoBehaviour
 
         int currentLevelIndex = gameMode == "Default"? LoadGameData.getCurrentLevel() : LoadGameData.getActiveLevel();
 
-				Debug.Log(currentLevelIndex);
+				Debug.Log(currentLevelIndex + 1);
 				
-        if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
-        {
+        // if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
+        // {
 					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
 						SaveGameData.setCurrentLevel(++currentLevelIndex);
 						SaveGameData.setUnlockedLevel(currentLevelIndex);
             SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());
 					}
-					else if(gameMode == "LevelSelect"){
+					if(gameMode == "LevelSelect"){
 						SaveGameData.setActiveLevel(++currentLevelIndex);
+						SaveGameData.setUnlockedLevel(currentLevelIndex);
             SceneManager.LoadSceneAsync(LoadGameData.getActiveLevel());
 					}
-        }	
+        // }	
     }
 }
