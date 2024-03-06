@@ -11,6 +11,8 @@ public class SkinItemUI : MonoBehaviour
    [SerializeField] Image ball1;
    [SerializeField] Image ball2;
    [SerializeField] Image obstacle;
+   [SerializeField] Image obstacle2;
+
    [SerializeField] TMP_Text skinName;
    [SerializeField] TMP_Text skinPrice;
    [SerializeField] Button skinPurchase;
@@ -27,6 +29,7 @@ public class SkinItemUI : MonoBehaviour
     this.ball1.sprite = ball1;
     this.ball2.sprite = ball2;
     this.obstacle.sprite = obstacle;
+    this.obstacle2.sprite = obstacle;
   }
 
   public void SetSkinName(string name){
@@ -38,7 +41,27 @@ public class SkinItemUI : MonoBehaviour
   }
 
   public void SetSkinAsPurchased(){
-    skinPurchase.gameObject.SetActive(false);
+    // skinPurchase.gameObject.SetActive(false);
+    skinPrice.text = "Owned";
+    Transform coinImageTransform = skinPurchase.transform.Find("Image");
+
+    if (coinImageTransform != null)
+    {
+        // Get the Image component from the child object
+        Image coinImage = coinImageTransform.GetComponent<Image>();
+
+        if (coinImage != null)
+        {
+            // Disable the Image component
+            coinImage.enabled = false;
+
+            // Center the price TextMeshPro text
+            Vector2 newAnchoredPosition = skinPrice.rectTransform.anchoredPosition;
+            newAnchoredPosition.x = 0; // Center along X-axis
+            skinPrice.rectTransform.anchoredPosition = newAnchoredPosition;
+        }
+    }
+    skinPurchase.interactable = false;
     itemButton.interactable = true;
   }
 
@@ -47,6 +70,8 @@ public class SkinItemUI : MonoBehaviour
     skinPurchase.onClick.RemoveAllListeners();
     skinPurchase.onClick.AddListener(() => action.Invoke (itemIndex));
   }
+
+  
   
   
 }

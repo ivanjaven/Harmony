@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 4326007082552395211}
   - component: {fileID: 7858137086068721779}
   - component: {fileID: 2096098458171229181}
+  - component: {fileID: 1530490779559451268}
   m_Layer: 5
   m_Name: TemplateShop
   m_TagString: Untagged
@@ -496,6 +497,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1530490779559451268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000521845503719631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57d9880ba78b3c4eba59b27e0c602a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball1: {fileID: 1423596593737897021}
+  ball2: {fileID: 6373493685490877316}
+  obstacle: {fileID: 8861191050696991353}
+  obstacle2: {fileID: 5214831302712717518}
+  skinName: {fileID: 7167223720674589681}
+  skinPrice: {fileID: 370614465790314267}
+  skinPurchase: {fileID: 3209468223958113158}
+  itemButton: {fileID: 2096098458171229181}
 --- !u!1 &5698219321591124463
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: 47.646015}
+  m_AnchoredPosition: {x: -171.22, y: 48.028}
   m_SizeDelta: {x: 342.4455, y: 105.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1331000380971428290
@@ -595,7 +616,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -824,8 +845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57, y: -132}
-  m_SizeDelta: {x: 272.2786, y: 104.8268}
+  m_AnchoredPosition: {x: -49.4859, y: -150}
+  m_SizeDelta: {x: 283.3069, y: 104.8268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3999591984847894982
 CanvasRenderer:

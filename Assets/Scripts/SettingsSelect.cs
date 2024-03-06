@@ -18,6 +18,7 @@ public class SettingsSelect : MonoBehaviour
         Shop.SetActive(false);
         SettingsSelector.SetActive(true);
     }
+    
     public void OnClickBackToHome(){
         SettingsSelector.SetActive(false);
     }
