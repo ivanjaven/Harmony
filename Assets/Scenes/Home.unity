@@ -2427,8 +2427,6 @@ MonoBehaviour:
   skinDatabase: {fileID: 11400000, guid: 04a1c65440275f546847f4fba74c3107, type: 2}
   skinItemPrefab: {fileID: 5000521845503719631, guid: e31fd5b58f950fe4fb0326d3470aeded, type: 3}
   contentPanel: {fileID: 1511142724}
-  buyMenuPanel: {fileID: 0}
-  useMenuPanel: {fileID: 0}
 --- !u!1 &429234559
 GameObject:
   m_ObjectHideFlags: 0
