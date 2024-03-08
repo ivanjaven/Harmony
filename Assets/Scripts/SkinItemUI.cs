@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class SkinItemUI : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class SkinItemUI : MonoBehaviour
    [SerializeField] TMP_Text skinName;
    [SerializeField] TMP_Text skinPrice;
    [SerializeField] Button skinPurchase;
+   [SerializeField] int index;
+   [SerializeField] SkinShopDatabase skinShopDatabase;
+   [SerializeField] SkinManager skinManager;
+   
   
 
   [Space(20f)]
@@ -38,6 +43,10 @@ public class SkinItemUI : MonoBehaviour
 
   public void SetSkinPrice(int price){
     skinPrice.text = price.ToString();
+  }
+
+  public void SetIndex(int index){
+    this.index = index;
   }
 
   public void SetSkinAsPurchased(){
@@ -71,6 +80,13 @@ public class SkinItemUI : MonoBehaviour
     skinPurchase.onClick.AddListener(() => action.Invoke (itemIndex));
   }
 
+ public void OnClickPurchasedSkin(){
+        // Skin skin = skinShopDatabase.GetSkin(this.index);
+        Debug.Log(this.index);
+        // skinManager.ChangeSkin(this.index);
+        SaveGameData.setCurrentSkin(this.index);
+        // SceneManager.LoadScene("Home");
+    }
   
   
   

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 4258942968783377822, guid: 43e2b9de2ec3a4643928a8d84cad5101, type: 3}
+  m_Sprite: {fileID: -8878624494578567007, guid: dc1307bad3862e9468a3d92bdcb3e7a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -201,9 +201,9 @@ TrailRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.5882353, g: 0.19215688, b: 0.5686275, a: 1}
-      key1: {r: 0.9450981, g: 0.5647059, b: 0.7843138, a: 0}
-      key2: {r: 1, g: 1, b: 1, a: 0}
+      key0: {r: 0.7607844, g: 0, b: 0, a: 1}
+      key1: {r: 0.67058825, g: 0.24313727, b: 0.24705884, a: 0}
+      key2: {r: 0.9450981, g: 0.5647059, b: 0.7843138, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -5554080879378378547, guid: 045d152eb80e970478bac6363855b39b, type: 3}
+  m_Sprite: {fileID: -1100431264229956953, guid: fc780ece6cf18a648acd7236964bdccd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -454,7 +454,7 @@ TrailRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.52156866, g: 0.6431373, b: 0.7725491, a: 1}
+      key0: {r: 0, g: 0.454902, b: 0.28627452, a: 1}
       key1: {r: 0.44705886, g: 0.81568635, b: 0.3254902, a: 0}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -728,8 +728,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.76470596, g: 0.13725491, b: 0.4901961, a: 1}
-      maxColor: {r: 0.7490196, g: 0.29411766, b: 0.7294118, a: 1}
+      minColor: {r: 0.909804, g: 0.7843138, b: 0.30588236, a: 1}
+      maxColor: {r: 0.7960785, g: 0.03137255, b: 0.03137255, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5421,7 +5421,7 @@ GameObject:
   - component: {fileID: 7002766834624417833}
   - component: {fileID: 1311218277313709330}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Hero_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5920,8 +5920,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.21842971, g: 0.9647059, b: 0.21176468, a: 1}
-      maxColor: {r: 0.40000004, g: 0.541344, b: 0.93333334, a: 1}
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.058823533, g: 0.3803922, b: 0.25882354, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

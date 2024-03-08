@@ -21,4 +21,5 @@ public class SkinShopDatabase : ScriptableObject
         skins[index].isPurchased = true;
     }
 
+
 }

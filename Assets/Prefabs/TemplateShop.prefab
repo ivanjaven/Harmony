@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 7858137086068721779}
   - component: {fileID: 2096098458171229181}
   - component: {fileID: 1530490779559451268}
+  - component: {fileID: 3018673906480890429}
   m_Layer: 5
   m_Name: TemplateShop
   m_TagString: Untagged
@@ -485,9 +486,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SkinShopItem, Assembly-CSharp
-        m_MethodName: OnSkinPressed
+      - m_Target: {fileID: 1530490779559451268}
+        m_TargetAssemblyTypeName: SkinItemUI, Assembly-CSharp
+        m_MethodName: OnClickPurchasedSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -516,7 +517,23 @@ MonoBehaviour:
   skinName: {fileID: 7167223720674589681}
   skinPrice: {fileID: 370614465790314267}
   skinPurchase: {fileID: 3209468223958113158}
+  index: 0
+  skinShopDatabase: {fileID: 11400000, guid: 04a1c65440275f546847f4fba74c3107, type: 2}
+  skinManager: {fileID: 0}
   itemButton: {fileID: 2096098458171229181}
+--- !u!114 &3018673906480890429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000521845503719631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabaa14a0418a7848b48e77d73077f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 5200380607221316957, guid: 3c367a5d80f992d4b9b3a6fc112d9bbb, type: 3}
 --- !u!1 &5698219321591124463
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class SkinShop : MonoBehaviour
             skinItemUI.SetSkinImages(skin.ball1, skin.ball2, skin.obstacle);
             skinItemUI.SetSkinName(skin.name);
             skinItemUI.SetSkinPrice(skin.price);
+            skinItemUI.SetIndex(skin.index);
 
             // Check if skin is purchased and set UI accordingly
             if (skin.isPurchased)
@@ -51,4 +52,6 @@ public class SkinShop : MonoBehaviour
     public void BuySkin(){
       // buyMenuPanel.gameObject.SetActive(false);
     }
+
+   
 }

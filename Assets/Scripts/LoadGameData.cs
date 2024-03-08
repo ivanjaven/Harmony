@@ -16,4 +16,7 @@ public class LoadGameData : MonoBehaviour
     public static int getUnlockedLevel(){ // get the number of unclocked or finished levels
         return PlayerPrefs.GetInt("UnlockedLevel");
     }
+    public static int getCurrentSkin(){ // get the number of unclocked or finished levels
+        return PlayerPrefs.GetInt("currentSkin");
+    }
 }

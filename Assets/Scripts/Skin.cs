@@ -9,5 +9,6 @@ public struct Skin
    public int price;
    public string name;
    public bool isPurchased;
+   public int index;
 
 }

@@ -20,4 +20,7 @@ public class SaveGameData : MonoBehaviour
     public static void setUnlockedLevel(int level){
         PlayerPrefs.SetInt("UnlockedLevel", level);
     }
+    public static void setCurrentSkin(int index){
+        PlayerPrefs.SetInt("currentSkin", index);
+    }
 }

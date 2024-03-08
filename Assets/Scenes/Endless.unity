@@ -1130,7 +1130,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 107429247}
   spawnInterval: 1
   spawnHeightOffset: 1
-  maxSpawnXOffsetRatio: 0.8
+  spawnXOffsetRange: 1
   spawnYGap: 6
   difficultyIncreaseInterval: 10
   spawnRateIncrease: 0.1

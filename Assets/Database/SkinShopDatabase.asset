@@ -19,27 +19,32 @@ MonoBehaviour:
     price: 199
     name: Ball_1
     isPurchased: 1
+    index: 0
   - ball1: {fileID: -9197601209572012561, guid: aa739d1208e1457459b78017bcab1364, type: 3}
     ball2: {fileID: -3700676018718914245, guid: a5d18c01223302643ad09ed3f97297a1, type: 3}
     obstacle: {fileID: -2172798591766454409, guid: 7c8485f6e0f2b9641bd33939fea68a92, type: 3}
     price: 199
     name: Ball_2
     isPurchased: 1
+    index: 1
   - ball1: {fileID: -8878624494578567007, guid: dc1307bad3862e9468a3d92bdcb3e7a4, type: 3}
     ball2: {fileID: -1100431264229956953, guid: fc780ece6cf18a648acd7236964bdccd, type: 3}
     obstacle: {fileID: -2054378613454918325, guid: 8f1ab10103e639c46b6c5d95ac5288ca, type: 3}
     price: 249
     name: Hero_1
     isPurchased: 1
+    index: 2
   - ball1: {fileID: -5603500094834217152, guid: 2419222dfaa85984c91ad85e06f3cf20, type: 3}
     ball2: {fileID: -1831101302215832123, guid: abfa62f1d6650a748864c6b7b46ac436, type: 3}
     obstacle: {fileID: -2054378613454918325, guid: 8f1ab10103e639c46b6c5d95ac5288ca, type: 3}
     price: 299
     name: Hero_2
     isPurchased: 1
+    index: 3
   - ball1: {fileID: -5554080879378378547, guid: 045d152eb80e970478bac6363855b39b, type: 3}
     ball2: {fileID: 4258942968783377822, guid: 43e2b9de2ec3a4643928a8d84cad5101, type: 3}
     obstacle: {fileID: -6291668305547641344, guid: c7778c759ec42b2499e132abb7acd731, type: 3}
     price: 349
     name: Planet_1
     isPurchased: 1
+    index: 4
