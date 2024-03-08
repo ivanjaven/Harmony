@@ -14,7 +14,7 @@ public class SkinShop : MonoBehaviour
         PopulateShop();
     }
 
-    void PopulateShop()
+    public void PopulateShop()
     {
         for (int i = 0; i < skinDatabase.SkinsCount; i++)
         {
@@ -27,6 +27,10 @@ public class SkinShop : MonoBehaviour
             skinItemUI.SetSkinName(skin.name);
             skinItemUI.SetSkinPrice(skin.price);
             skinItemUI.SetIndex(skin.index);
+
+            if(i == LoadGameData.getCurrentSkin()){
+                skinItemUI.SetSelectedBackgroundSprite();
+            }
 
             // Check if skin is purchased and set UI accordingly
             if (skin.isPurchased)
@@ -41,7 +45,7 @@ public class SkinShop : MonoBehaviour
         }
     }
 
-    void PurchaseSkin(int skinIndex)
+    public void PurchaseSkin(int skinIndex)
     {
         skinDatabase.PurchaseCharacter(skinIndex);
         // Refresh UI after purchase (optional)

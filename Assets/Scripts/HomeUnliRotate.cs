@@ -20,4 +20,8 @@ public class HomeUnliRotate : MonoBehaviour
 	{
 		rb.angularVelocity = -rotationSpeed;
 	}
+
+    public void SetRotationSpeed(int speed){
+        this.rotationSpeed = speed;
+    }
 }

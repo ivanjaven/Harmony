@@ -69,8 +69,6 @@ public class SkinManager : MonoBehaviour
                     string obstacleName = obstaclePrefab.name.ToLower(); // Convert to lower case for case-insensitive comparison
 
                     // Check if the name contains "closing" or "block"
-                    if(obstacleName.Contains("shuriken") || obstacleName.Contains("axe")) continue; // skin the shuriken and axe
-
                     if (obstacleName.Contains("closing") || obstacleName.Contains("block"))
                     {
                         // Change the sprite of the obstacle prefab's children
@@ -78,7 +76,7 @@ public class SkinManager : MonoBehaviour
                         {
                             SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
                             if(childSpriteRenderer.name.Contains("identifier")) continue; // skin the closing identifier
-                            
+
                             if (childSpriteRenderer != null)
                             {
                                 // Change the sprite of the child obstacle prefab

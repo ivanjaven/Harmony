@@ -19,7 +19,6 @@ public class SkinItemUI : MonoBehaviour
    [SerializeField] Button skinPurchase;
    [SerializeField] int index;
    [SerializeField] SkinShopDatabase skinShopDatabase;
-   [SerializeField] SkinManager skinManager;
 
    [SerializeField] Image itemBackgroundImage;
    
@@ -27,6 +26,7 @@ public class SkinItemUI : MonoBehaviour
 
   [Space(20f)]
   [SerializeField] Button itemButton;
+
 
   public void SetItemPosition (Vector2 pos){
     GetComponent<RectTransform>().anchoredPosition += pos;
@@ -85,13 +85,14 @@ public class SkinItemUI : MonoBehaviour
  public void OnClickPurchasedSkin(){
         // Skin skin = skinShopDatabase.GetSkin(this.index);
         Debug.Log(this.index);
-        // skinManager.ChangeSkin(this.index);
         SaveGameData.setCurrentSkin(this.index);
-        // SceneManager.LoadScene("Home");
-        // SetBackgroundSprite();
+        SceneManager.LoadScene("Home");
+        
+        // skinShop.PopulateShop();
+        
     }
 
-    public void SetBackgroundSprite()
+    public void SetSelectedBackgroundSprite()
     {
         Sprite newBackgroundSprite = Resources.Load<Sprite>("SelectedBackground");
         if (itemBackgroundImage != null)
