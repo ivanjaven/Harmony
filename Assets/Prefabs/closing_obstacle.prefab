@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectangle1: {fileID: 3661646365350487834}
   rectangle2: {fileID: 1417877137655377379}
-  closingSpeed: 3
+  closingSpeed: 7
   reopenDelay: 2
 --- !u!61 &8001278360081207693
 BoxCollider2D:
