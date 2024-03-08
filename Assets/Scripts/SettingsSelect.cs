@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SettingsSelect : MonoBehaviour
 {
      public GameObject SettingsSelector, Shop;
-    
+     
     public void OnClickSettings(){
         SettingsSelector.SetActive(true);
     }

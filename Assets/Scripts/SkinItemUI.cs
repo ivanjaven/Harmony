@@ -20,6 +20,8 @@ public class SkinItemUI : MonoBehaviour
    [SerializeField] int index;
    [SerializeField] SkinShopDatabase skinShopDatabase;
    [SerializeField] SkinManager skinManager;
+
+   [SerializeField] Image itemBackgroundImage;
    
   
 
@@ -86,6 +88,20 @@ public class SkinItemUI : MonoBehaviour
         // skinManager.ChangeSkin(this.index);
         SaveGameData.setCurrentSkin(this.index);
         // SceneManager.LoadScene("Home");
+        // SetBackgroundSprite();
+    }
+
+    public void SetBackgroundSprite()
+    {
+        Sprite newBackgroundSprite = Resources.Load<Sprite>("SelectedBackground");
+        if (itemBackgroundImage != null)
+        {
+            itemBackgroundImage.sprite = newBackgroundSprite;
+        }
+        else
+        {
+            Debug.LogWarning("Item background Image component is not assigned.");
+        }
     }
   
   

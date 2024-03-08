@@ -17,4 +17,8 @@ public class PlayerObstacleSkinDatabase : ScriptableObject
         return skins[index];
     }
 
+    public Sprite GetObstacle(int index){
+        return skins[index].obstacle;
+    }
+
 }

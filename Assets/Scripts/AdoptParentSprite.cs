@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class AdoptParentSprite : MonoBehaviour  // This script is use for the children of prefabs to adapt the sprite of its parent
 {
+
+    public Sprite obstacle;
+    
     void Start()
     {
         // Get the SpriteRenderer component of the parent

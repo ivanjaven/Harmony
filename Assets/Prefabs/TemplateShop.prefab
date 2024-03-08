@@ -520,6 +520,7 @@ MonoBehaviour:
   index: 0
   skinShopDatabase: {fileID: 11400000, guid: 04a1c65440275f546847f4fba74c3107, type: 2}
   skinManager: {fileID: 0}
+  itemBackgroundImage: {fileID: 1699255930554357311}
   itemButton: {fileID: 2096098458171229181}
 --- !u!114 &3018673906480890429
 MonoBehaviour:

@@ -1,13 +1,12 @@
 using UnityEngine;
 
+using System;
+
 public class SkinShop : MonoBehaviour
 {
     public SkinShopDatabase skinDatabase;
     public GameObject skinItemPrefab;
     public Transform contentPanel;
-
-    // public Transform buyMenuPanel;
-    // public Transform useMenuPanel;
 
     void Start()
     {
@@ -53,5 +52,12 @@ public class SkinShop : MonoBehaviour
       // buyMenuPanel.gameObject.SetActive(false);
     }
 
+    public void ChangeItemBackgroundSprite()
+    {
+        // Get all TemplateShop instances under the Content game object
+        
+    }
+
    
 }
+

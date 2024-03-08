@@ -17,6 +17,10 @@ public class SkinShopDatabase : ScriptableObject
         return skins[index];
     }
 
+    public string GetName(int index){
+        return skins[index].name;
+    }
+
     public void PurchaseCharacter (int index){
         skins[index].isPurchased = true;
     }
