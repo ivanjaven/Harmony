@@ -136,36 +136,36 @@ public class PlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(1f); // delay time
  
-				string gameMode = LoadGameData.getGameMode(); //check the mode of game the player chose
+				string gameMode = LoadGameData.GetGameMode(); //check the mode of game the player chose
 
 				// gameMode ??= "Default";
 
 				 
 				 // initial data if the game is newly installed
-				if(LoadGameData.getCurrentLevel() <= 1){
-					SaveGameData.setCurrentLevel(1);
+				if(LoadGameData.GetCurrentLevel() <= 1){
+					SaveGameData.SetCurrentLevel(1);
 				}
-				if(LoadGameData.getActiveLevel() <= 1){
-					SaveGameData.setActiveLevel(1);
+				if(LoadGameData.GetActiveLevel() <= 1){
+					SaveGameData.SetActiveLevel(1);
 				}
 
-        int currentLevelIndex = gameMode == "Default"? LoadGameData.getCurrentLevel() : LoadGameData.getActiveLevel();
+        int currentLevelIndex = gameMode == "Default"? LoadGameData.GetCurrentLevel() : LoadGameData.GetActiveLevel();
 
 				Debug.Log(currentLevelIndex + 1);
 				
         // if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
         // {
-					if(gameMode == "Default" || LoadGameData.getCurrentLevel() == LoadGameData.getActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
-						SaveGameData.setCurrentLevel(currentLevelIndex + 1);
-						SaveGameData.setUnlockedLevel(currentLevelIndex + 1);
+					if(gameMode == "Default" || LoadGameData.GetCurrentLevel() == LoadGameData.GetActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
+						SaveGameData.SetCurrentLevel(currentLevelIndex + 1);
+						SaveGameData.SetUnlockedLevel(currentLevelIndex + 1);
 						if(gameMode != "LevelSelect")
-            	SceneManager.LoadSceneAsync(LoadGameData.getCurrentLevel());
+            	SceneManager.LoadSceneAsync(LoadGameData.GetCurrentLevel());
 					}
 					if(gameMode == "LevelSelect"){
-						SaveGameData.setActiveLevel(currentLevelIndex + 1);
-						if(currentLevelIndex > LoadGameData.getUnlockedLevel())
-							SaveGameData.setUnlockedLevel(currentLevelIndex + 1);
-            SceneManager.LoadSceneAsync(LoadGameData.getActiveLevel());
+						SaveGameData.SetActiveLevel(currentLevelIndex + 1);
+						if(currentLevelIndex > LoadGameData.GetUnlockedLevel())
+							SaveGameData.SetUnlockedLevel(currentLevelIndex + 1);
+            SceneManager.LoadSceneAsync(LoadGameData.GetActiveLevel());
 					}
         // }	
     }

@@ -32,8 +32,8 @@ public class LevelSelectionManager : MonoBehaviour
     }
 
     public void OnClickLevel(int levelNumber){ //load the level number passed by the button and save it as active level
-        SaveGameData.setGameMode("LevelSelect");
-        SaveGameData.setActiveLevel(levelNumber);
+        SaveGameData.SetGameMode("LevelSelect");
+        SaveGameData.SetActiveLevel(levelNumber);
         SceneManager.LoadScene("level" + levelNumber);
     }
 

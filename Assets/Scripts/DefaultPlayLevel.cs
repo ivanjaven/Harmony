@@ -13,14 +13,14 @@ public class DefaultPlayLevel : MonoBehaviour
     }
 
     public void OpenScene(){ // When pressing play at home screen, the scene loaded was the latest level
-        SaveGameData.setGameMode("Default");
+        SaveGameData.SetGameMode("Default");
         // SaveGameData.setActiveLevel(1);
         // SaveGameData.setCurrentLevel(1);
         // SaveGameData.setUnlockedLevel(1);
-        if(LoadGameData.getCurrentLevel() <= 1)
+        if(LoadGameData.GetCurrentLevel() <= 1)
             SceneManager.LoadScene("level1");
            
-        else SceneManager.LoadScene("level"+LoadGameData.getCurrentLevel());
+        else SceneManager.LoadScene("level"+LoadGameData.GetCurrentLevel());
  
     }
 }

@@ -2,37 +2,47 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class SkinItemUI : MonoBehaviour
 {
 
-    [Space(20f)]
-   [SerializeField] Image ball1;
-   [SerializeField] Image ball2;
-   [SerializeField] Image obstacle;
-   [SerializeField] Image obstacle2;
+  [Space(20f)]
+  [SerializeField] Image ball1;
+  [SerializeField] Image ball2;
+  [SerializeField] Image obstacle;
+  [SerializeField] Image obstacle2;
 
-   [SerializeField] TMP_Text skinName;
-   [SerializeField] TMP_Text skinPrice;
-   [SerializeField] Button skinPurchase;
-   [SerializeField] int index;
-   [SerializeField] SkinShopDatabase skinShopDatabase;
+  [SerializeField] TMP_Text skinName;
+  [SerializeField] TMP_Text skinPrice;
+  [SerializeField] Button skinPurchase;
+  [SerializeField] SkinShop skinShop;
 
-   [SerializeField] Image itemBackgroundImage;
-   
-  
+  [SerializeField] Image itemBackgroundImage;
+  [SerializeField] int index;
+
+  SkinItemUI skinItemUI;
+  // public float shakeDuration = 3f; // Duration of the shake effect
+  // public float shakeStrength = 50.0f; // Strength of the shake effect
 
   [Space(20f)]
   [SerializeField] Button itemButton;
 
 
-  public void SetItemPosition (Vector2 pos){
-    GetComponent<RectTransform>().anchoredPosition += pos;
+  public void Start()
+  {
+    skinItemUI = this;
+    skinShop = GetComponentInParent<SkinShop>(); // Find the SkinShop component in the parent hierarchy
+    itemButton.onClick.AddListener(OnItemButtonClick); 
   }
 
-  public void  SetSkinImages (Sprite ball1, Sprite ball2, Sprite obstacle){
+  public void SetItemPosition (Vector2 pos)
+  {
+    GetComponent<RectTransform>().anchoredPosition += pos; // displaying in the content panel
+  }
+
+  public void SetSkinImages (Sprite ball1, Sprite ball2, Sprite obstacle)
+  {
     this.ball1.sprite = ball1;
     this.ball2.sprite = ball2;
     this.obstacle.sprite = obstacle;
@@ -51,19 +61,19 @@ public class SkinItemUI : MonoBehaviour
     this.index = index;
   }
 
-  public void SetSkinAsPurchased(){
-    // skinPurchase.gameObject.SetActive(false);
+  public void SetSkinAsPurchased() // if the skin is already purchased, this UI will be applied
+  { 
     skinPrice.text = "Owned";
     Transform coinImageTransform = skinPurchase.transform.Find("Image");
 
     if (coinImageTransform != null)
     {
-        // Get the Image component from the child object
+        // Get the coint image component from the child object
         Image coinImage = coinImageTransform.GetComponent<Image>();
 
         if (coinImage != null)
         {
-            // Disable the Image component
+            // Disable the coing image component
             coinImage.enabled = false;
 
             // Center the price TextMeshPro text
@@ -72,24 +82,24 @@ public class SkinItemUI : MonoBehaviour
             skinPrice.rectTransform.anchoredPosition = newAnchoredPosition;
         }
     }
-    skinPurchase.interactable = false;
-    itemButton.interactable = true;
+    // skinPurchase.interactable = false; 
+    itemButton.interactable = false;
   }
 
-  public void OnItemPurchase(int itemIndex, UnityAction<int> action){
-    itemButton.interactable = true;
-    skinPurchase.onClick.RemoveAllListeners();
-    skinPurchase.onClick.AddListener(() => action.Invoke (itemIndex));
+  public void OnItemPurchase() // Triggered when the item is Purchased
+  {
+    skinShop.PurchaseSkin(index);
+    skinShop.PopulateShop(); // refreseh the shop display
   }
 
  public void OnClickPurchasedSkin(){
-        // Skin skin = skinShopDatabase.GetSkin(this.index);
-        Debug.Log(this.index);
-        SaveGameData.setCurrentSkin(this.index);
-        SceneManager.LoadScene("Home");
-        
-        // skinShop.PopulateShop();
-        
+        if(skinPrice.text == "Owned"){
+          SaveGameData.SetCurrentSkin(index);
+          skinShop.PopulateShop();
+        }
+        else{
+          Debug.Log("Buy item first");
+        }
     }
 
     public void SetSelectedBackgroundSprite()
@@ -104,7 +114,20 @@ public class SkinItemUI : MonoBehaviour
             Debug.LogWarning("Item background Image component is not assigned.");
         }
     }
-  
-  
-  
+
+    void OnItemButtonClick()
+    {
+      int price = int.Parse(skinPrice.text);
+      if(LoadGameData.GetCoinValue() >= price){
+        OnItemPurchase();
+        SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() - price);
+        skinShop.UpdateCoins(LoadGameData.GetCoinValue());
+      }
+        
+      else{
+        Debug.Log("Not enough money");
+        this.transform.DOShakePosition(2, 10); 
+        skinShop.coinItem.transform.DOShakePosition(2,10);
+      }
+    }
 }

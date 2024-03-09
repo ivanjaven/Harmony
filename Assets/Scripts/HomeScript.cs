@@ -17,7 +17,7 @@ public class HomeScript : MonoBehaviour
         LevelSelector.SetActive(false);
         Settings.SetActive(false);
         Shop.SetActive(false);
-        newPlayerPrefab = skinShopDatabase.GetSkin(LoadGameData.getCurrentSkin()).playerPrefab;
+        newPlayerPrefab = skinShopDatabase.GetSkin(LoadGameData.GetCurrentSkin()).playerPrefab;
         SetPlayer();
     }
 

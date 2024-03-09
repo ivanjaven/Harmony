@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingsSelect : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class SettingsSelect : MonoBehaviour
     }
     
     public void OnClickBackToHome(){
-        SettingsSelector.SetActive(false);
+        SceneManager.LoadScene("Home");
     }
 
     public void OnClickQuit(){

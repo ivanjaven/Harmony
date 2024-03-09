@@ -10,6 +10,6 @@ public class Clickable : MonoBehaviour // This class is use to fix the buttons d
     void Start()
     {
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = alphaTreshold;
-        SaveGameData.setGameMode("LevelSelect"); // set the game to LevelSelect each time level button was clicked
+        SaveGameData.SetGameMode("LevelSelect"); // set the game to LevelSelect each time level button was clicked
     }
 }

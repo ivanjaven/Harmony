@@ -10,8 +10,8 @@ public class SkinManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(skinDatabase.GetObstacle(LoadGameData.getCurrentSkin()));
-        newSprite = skinDatabase.GetObstacle(LoadGameData.getCurrentSkin());
+        Debug.Log(skinDatabase.GetObstacle(LoadGameData.GetCurrentSkin()));
+        newSprite = skinDatabase.GetObstacle(LoadGameData.GetCurrentSkin());
         ChangeSkin();
         ChangeObstacleSprites();
     }
@@ -19,7 +19,7 @@ public class SkinManager : MonoBehaviour
     // Change the skin of the player object with the "Player" tag
     public void ChangeSkin()
     {
-        int index = LoadGameData.getCurrentSkin();
+        int index = LoadGameData.GetCurrentSkin();
         PlayerObstacleSkin selectedSkin = skinDatabase.GetSkin(index);
         if (selectedSkin != null) // Check if the selected skin exists
         {

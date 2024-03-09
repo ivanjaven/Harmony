@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8f1ab10103e639c46b6c5d95ac5288ca
+guid: 8c8236abebeb65844bd7e0e810fcbad8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2054378613454918325
-    second: hero obstacle_0
+      213: -5475776996075408921
+    second: hero obstacle 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero obstacle_0
+      name: hero obstacle 1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 9
-        width: 246
-        height: 119
+        x: 7
+        y: 5
+        width: 243
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4d2cde19816d73e0800000000000000
-      internalID: -2054378613454918325
+      spriteID: 7e17baf75d12204b0800000000000000
+      internalID: -5475776996075408921
       vertices: []
       indices: 
       edges: []
@@ -143,8 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      hero obstacle_0: -2054378613454918325
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

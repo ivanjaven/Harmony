@@ -6,21 +6,24 @@ using UnityEngine;
 public class SaveGameData : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static void setCurrentLevel(int level){
+    public static void SetCurrentLevel(int level){
         PlayerPrefs.SetInt("currentLevel", level);
     }
 
-    public static void setActiveLevel(int level){
+    public static void SetActiveLevel(int level){
         PlayerPrefs.SetInt("activeLevel", level);
     }
 
-    public static void setGameMode(String mode){
+    public static void SetGameMode(String mode){
         PlayerPrefs.SetString("mode", mode);
     }
-    public static void setUnlockedLevel(int level){
+    public static void SetUnlockedLevel(int level){
         PlayerPrefs.SetInt("UnlockedLevel", level);
     }
-    public static void setCurrentSkin(int index){
+    public static void SetCurrentSkin(int index){
         PlayerPrefs.SetInt("currentSkin", index);
+    }
+    public static void SetCoinValue(int index){
+        PlayerPrefs.SetInt("coins", index);
     }
 }

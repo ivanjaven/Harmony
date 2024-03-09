@@ -17,9 +17,9 @@ MonoBehaviour:
     playerPrefab: {fileID: 5200380607221316957, guid: 15aa91a710f072e4d9bfc13344fc1c8d, type: 3}
   - obstacle: {fileID: -2172798591766454409, guid: 7c8485f6e0f2b9641bd33939fea68a92, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: 5e59f79f9ca09464cb740933a99498ad, type: 3}
-  - obstacle: {fileID: -2054378613454918325, guid: 8f1ab10103e639c46b6c5d95ac5288ca, type: 3}
+  - obstacle: {fileID: -5475776996075408921, guid: 8201aeda392b9f84ea791783ceef032f, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: e9dc462f0fb0dbb4392161d9c09ef927, type: 3}
-  - obstacle: {fileID: -2054378613454918325, guid: 8f1ab10103e639c46b6c5d95ac5288ca, type: 3}
+  - obstacle: {fileID: -5475776996075408921, guid: 8201aeda392b9f84ea791783ceef032f, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: dbf7b4870981b7b4ba0045741a687ad1, type: 3}
   - obstacle: {fileID: -6291668305547641344, guid: 3b1ecf7fc1d3cf149af37d2610a645dc, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: 3c367a5d80f992d4b9b3a6fc112d9bbb, type: 3}

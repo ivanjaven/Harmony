@@ -1,21 +1,28 @@
 using UnityEngine;
-
-using System;
+using TMPro;
 
 public class SkinShop : MonoBehaviour
 {
     public SkinShopDatabase skinDatabase;
-    public GameObject skinItemPrefab;
+    public GameObject skinItemPrefab, coinItem;
     public Transform contentPanel;
+    public TextMeshProUGUI coins;
 
     void Start()
     {
         // buyMenuPanel.gameObject.SetActive(false);
         PopulateShop();
+        DisplayCoins();
     }
 
     public void PopulateShop()
     {
+        Debug.Log("triggered");
+        foreach (Transform child in contentPanel)
+        {
+            // Destroy each child object
+            Destroy(child.gameObject);
+        }
         for (int i = 0; i < skinDatabase.SkinsCount; i++)
         {
             Skin skin = skinDatabase.GetSkin(i);
@@ -28,7 +35,7 @@ public class SkinShop : MonoBehaviour
             skinItemUI.SetSkinPrice(skin.price);
             skinItemUI.SetIndex(skin.index);
 
-            if(i == LoadGameData.getCurrentSkin()){
+            if(i == LoadGameData.GetCurrentSkin()){
                 skinItemUI.SetSelectedBackgroundSprite();
             }
 
@@ -37,31 +44,24 @@ public class SkinShop : MonoBehaviour
             {
                 skinItemUI.SetSkinAsPurchased();
             }
-            else
-            {
-                // Attach purchase event to button
-                skinItemUI.OnItemPurchase(i, PurchaseSkin);
-            }
+            
         }
     }
 
     public void PurchaseSkin(int skinIndex)
     {
         skinDatabase.PurchaseCharacter(skinIndex);
-        // Refresh UI after purchase (optional)
+        // Refresh UI after purchase
         PopulateShop();
     }
 
-    public void BuySkin(){
-      // buyMenuPanel.gameObject.SetActive(false);
+    public void DisplayCoins(){
+        coins.text = LoadGameData.GetCoinValue().ToString();
     }
 
-    public void ChangeItemBackgroundSprite()
-    {
-        // Get all TemplateShop instances under the Content game object
-        
+    public void UpdateCoins(int value){
+        coins.text = value.ToString();
     }
-
    
 }
 
