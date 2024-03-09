@@ -24,6 +24,4 @@ public class SkinShopDatabase : ScriptableObject
     public void PurchaseCharacter (int index){
         skins[index].isPurchased = true;
     }
-
-
 }

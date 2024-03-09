@@ -10,14 +10,14 @@ public class SkinShop : MonoBehaviour
 
     void Start()
     {
-        // buyMenuPanel.gameObject.SetActive(false);
+        SaveGameData.SetCoinValue(20000);
         PopulateShop();
         DisplayCoins();
     }
 
     public void PopulateShop()
     {
-        Debug.Log("triggered");
+
         foreach (Transform child in contentPanel)
         {
             // Destroy each child object
@@ -51,8 +51,6 @@ public class SkinShop : MonoBehaviour
     public void PurchaseSkin(int skinIndex)
     {
         skinDatabase.PurchaseCharacter(skinIndex);
-        // Refresh UI after purchase
-        PopulateShop();
     }
 
     public void DisplayCoins(){
