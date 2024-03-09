@@ -10,7 +10,6 @@ public class SkinShop : MonoBehaviour
 
     void Start()
     {
-        SaveGameData.SetCoinValue(20000);
         PopulateShop();
         DisplayCoins();
     }

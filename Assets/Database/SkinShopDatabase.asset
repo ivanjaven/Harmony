@@ -15,14 +15,14 @@ MonoBehaviour:
   skins:
   - ball1: {fileID: -2113790328256923299, guid: 141cb1d40b2484c42814ebb7702e9039, type: 3}
     ball2: {fileID: -5644026120064284040, guid: 04b286b3a8e0d29489303bf7e461a606, type: 3}
-    obstacle: {fileID: -2172798591766454409, guid: 7c8485f6e0f2b9641bd33939fea68a92, type: 3}
+    obstacle: {fileID: -2172798591766454409, guid: 00a6d20017c3aaa47bff731bead7fc0c, type: 3}
     price: 199
     name: Ball_1
     isPurchased: 0
     index: 0
   - ball1: {fileID: -9197601209572012561, guid: aa739d1208e1457459b78017bcab1364, type: 3}
     ball2: {fileID: -3700676018718914245, guid: a5d18c01223302643ad09ed3f97297a1, type: 3}
-    obstacle: {fileID: -2172798591766454409, guid: 7c8485f6e0f2b9641bd33939fea68a92, type: 3}
+    obstacle: {fileID: -2172798591766454409, guid: 00a6d20017c3aaa47bff731bead7fc0c, type: 3}
     price: 199
     name: Ball_2
     isPurchased: 1
@@ -41,9 +41,9 @@ MonoBehaviour:
     name: Hero_2
     isPurchased: 0
     index: 3
-  - ball1: {fileID: -5554080879378378547, guid: 045d152eb80e970478bac6363855b39b, type: 3}
-    ball2: {fileID: 4258942968783377822, guid: 43e2b9de2ec3a4643928a8d84cad5101, type: 3}
-    obstacle: {fileID: -6291668305547641344, guid: c7778c759ec42b2499e132abb7acd731, type: 3}
+  - ball1: {fileID: 4258942968783377822, guid: de70140c105ec2543afc0abb55b1c568, type: 3}
+    ball2: {fileID: -5554080879378378547, guid: eb0d035b5fee84a4abd655465dfb211d, type: 3}
+    obstacle: {fileID: -6291668305547641344, guid: 3b1ecf7fc1d3cf149af37d2610a645dc, type: 3}
     price: 349
     name: Planet_1
     isPurchased: 0
