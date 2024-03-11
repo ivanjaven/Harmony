@@ -130,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
         {
 						int level;
 
+						
 						if(LoadGameData.GetGameMode() == "Default")	{
 							level = LoadGameData.GetCurrentLevel();
 						}
@@ -137,13 +138,16 @@ public class PlayerMovement : MonoBehaviour
 							level = LoadGameData.GetActiveLevel();
 						}
 
+						if(level > 1){
+
 						SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + (level) * 15); // add coins per leve end
 
 						Transform coinAdd = mainUI.transform.Find("CoinAdd");
 
-						TransitionAddCoin(coinAdd);
+						TransitionAddCoin(coinAdd); // transition the adding of coin in the UI 
+						}
 
-            transform.DORotate(Vector3.zero, 1f);
+            transform.DORotate(Vector3.zero, 1f); // reset the placement of player
 						
             Destroy(other.gameObject);
 
@@ -157,9 +161,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(1f); // delay time
  
 				string gameMode = LoadGameData.GetGameMode(); //check the mode of game the player chose
-
-				// gameMode ??= "Default";
-
 				 
 				 // initial data if the game is newly installed
 				if(LoadGameData.GetCurrentLevel() <= 1){
