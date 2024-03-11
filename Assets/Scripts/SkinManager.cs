@@ -10,7 +10,6 @@ public class SkinManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(skinDatabase.GetObstacle(LoadGameData.GetCurrentSkin()));
         newSprite = skinDatabase.GetObstacle(LoadGameData.GetCurrentSkin());
         ChangeSkin();
         ChangeObstacleSprites();

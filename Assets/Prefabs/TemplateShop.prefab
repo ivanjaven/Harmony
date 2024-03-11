@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4258942968783377822, guid: 43e2b9de2ec3a4643928a8d84cad5101, type: 3}
+  m_Sprite: {fileID: -5554080879378378547, guid: eb0d035b5fee84a4abd655465dfb211d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6291668305547641344, guid: c7778c759ec42b2499e132abb7acd731, type: 3}
+  m_Sprite: {fileID: -6291668305547641344, guid: 3b1ecf7fc1d3cf149af37d2610a645dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5554080879378378547, guid: 045d152eb80e970478bac6363855b39b, type: 3}
+  m_Sprite: {fileID: 4258942968783377822, guid: de70140c105ec2543afc0abb55b1c568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -517,9 +517,9 @@ MonoBehaviour:
   skinName: {fileID: 7167223720674589681}
   skinPrice: {fileID: 370614465790314267}
   skinPurchase: {fileID: 3209468223958113158}
-  index: 0
   skinShop: {fileID: 0}
   itemBackgroundImage: {fileID: 1699255930554357311}
+  index: 0
   itemButton: {fileID: 3209468223958113158}
 --- !u!114 &3018673906480890429
 MonoBehaviour:
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6291668305547641344, guid: c7778c759ec42b2499e132abb7acd731, type: 3}
+  m_Sprite: {fileID: -6291668305547641344, guid: 3b1ecf7fc1d3cf149af37d2610a645dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

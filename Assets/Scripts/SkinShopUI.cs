@@ -10,6 +10,7 @@ public class SkinShop : MonoBehaviour
 
     void Start()
     {
+        // SaveGameData.SetCoinValue(1000); // for testing purposes
         PopulateShop();
         DisplayCoins();
     }

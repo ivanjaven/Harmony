@@ -2,17 +2,20 @@
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
 	#region Singleton class: PlayerMovement
 
 	public static PlayerMovement Instance;
+	public GameObject mainUI;
 
 	void Awake ()
 	{
 		if (Instance == null)
 			Instance = this;
+		
 	}
 
 	#endregion
@@ -41,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 		cam = Camera.main;
 
 		MoveUp ();
+
+		mainUI = GameObject.Find("MainUI");
 	}
 
 	void Update ()
@@ -123,6 +128,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("LevelEnd"))
         {
+						int level;
+
+						if(LoadGameData.GetGameMode() == "Default")	{
+							level = LoadGameData.GetCurrentLevel();
+						}
+						else {
+							level = LoadGameData.GetActiveLevel();
+						}
+
+						SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + (level) * 15); // add coins per leve end
+
+						Transform coinAdd = mainUI.transform.Find("CoinAdd");
+
+						TransitionAddCoin(coinAdd);
+
             transform.DORotate(Vector3.zero, 1f);
 						
             Destroy(other.gameObject);
@@ -169,4 +189,28 @@ public class PlayerMovement : MonoBehaviour
 					}
         // }	
     }
+
+		void TransitionAddCoin(Transform coinAdd){
+			coinAdd.gameObject.SetActive(true);
+						 coinAdd.DOMoveY(coinAdd.position.y + 60f, 1f)
+                    .SetEase(Ease.OutQuad)
+                    .OnComplete(() =>
+                    {
+                        // Fade out the TextMeshProUGUI component attached to the "CoinAdd" GameObject
+                        TextMeshProUGUI coinAddText = coinAdd.GetComponent<TextMeshProUGUI>();
+                        if (coinAddText != null)
+                        {
+                            coinAddText.DOFade(0f, 1f).OnComplete(() =>
+                            {
+                                // Optional: Destroy or disable the "CoinAdd" GameObject after fading
+                                coinAdd.gameObject.SetActive(false);
+                            });
+                        }
+                        else
+                        {
+                            Debug.LogWarning("TextMeshProUGUI component not found on 'CoinAdd' GameObject.");
+                        }
+                    });
+
+		}
 }
