@@ -23,3 +23,11 @@ MonoBehaviour:
     playerPrefab: {fileID: 5200380607221316957, guid: dbf7b4870981b7b4ba0045741a687ad1, type: 3}
   - obstacle: {fileID: -6291668305547641344, guid: 3b1ecf7fc1d3cf149af37d2610a645dc, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: 3c367a5d80f992d4b9b3a6fc112d9bbb, type: 3}
+  - obstacle: {fileID: -2385590082880020357, guid: 7860ac3a3f27358499c0852a34b91c1b, type: 3}
+    playerPrefab: {fileID: 5200380607221316957, guid: 21d1b5a91bb8e6048b66835d176e075f, type: 3}
+  - obstacle: {fileID: 2954991308336413509, guid: 9c45a12727f3c6b48b4b1fa7e90c58be, type: 3}
+    playerPrefab: {fileID: 5200380607221316957, guid: b85ce32639d8b4e43b6b074e345d21b9, type: 3}
+  - obstacle: {fileID: 6366498752464805741, guid: 1138c1a62448edb47b15cf356c1305dd, type: 3}
+    playerPrefab: {fileID: 5200380607221316957, guid: b4a6f6964fd700e44b1b66f98df5c88c, type: 3}
+  - obstacle: {fileID: -2565506184937685692, guid: 2c14131840e88b8479efbd5bcd07ab2e, type: 3}
+    playerPrefab: {fileID: 5200380607221316957, guid: b92b9f4c6e4c7fb44be5334bc306d3c9, type: 3}

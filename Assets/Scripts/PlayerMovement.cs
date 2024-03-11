@@ -182,8 +182,8 @@ public class PlayerMovement : MonoBehaviour
 
         int currentLevelIndex = gameMode == "Default"? LoadGameData.GetCurrentLevel() : LoadGameData.GetActiveLevel();
 				
-        // if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
-        // {
+        if (currentLevelIndex < SceneManager.sceneCountInBuildSettings - 3)
+        {
 					if(gameMode == "Default" || LoadGameData.GetCurrentLevel() == LoadGameData.GetActiveLevel()){ // The default will also be trigger if the active level is equal to current (latest) level
 						SaveGameData.SetCurrentLevel(currentLevelIndex + 1);
 						SaveGameData.SetUnlockedLevel(currentLevelIndex + 1);
@@ -196,7 +196,13 @@ public class PlayerMovement : MonoBehaviour
 							SaveGameData.SetUnlockedLevel(currentLevelIndex + 1);
             SceneManager.LoadSceneAsync(LoadGameData.GetActiveLevel());
 					}
-        // }	
+        }	
+
+				else {
+					Debug.Log("You win the game");
+					yield return new WaitForSeconds(2f);
+					SceneManager.LoadScene("WinningScene");
+				}
     }
 
 		void TransitionAddCoin(Transform coinAdd){

@@ -80,5 +80,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Endless.unity
     guid: ce0b798d14cddc843912640304a75782
+  - enabled: 1
+    path: Assets/Scenes/WinningScene.unity
+    guid: 0defbd4fe2ec7e248b86ed3e9d8bac99
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

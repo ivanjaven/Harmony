@@ -2,7 +2,7 @@
 
 public class BallCollision : MonoBehaviour // This script is use to add explosion animation effect on collision
 {
-	ParticleSystem explosionFx; //Use unity built in particle system
+	ParticleSystem explosionFx; // Use unity built in particle system
 	int ballIndex;
 
 	void Start ()
