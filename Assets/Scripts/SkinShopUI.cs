@@ -11,6 +11,7 @@ public class SkinShop : MonoBehaviour
     void Start()
     {
         // SaveGameData.SetCoinValue(1000); // for testing purposes
+        PlayerPrefs.SetInt("Skin_" + "Ball_1" + "_Purchased", 1); // always make ball_1 purchase
         PopulateShop();
         DisplayCoins();
     }

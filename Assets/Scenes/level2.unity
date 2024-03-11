@@ -1300,6 +1300,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3053476767735745883, guid: 2286e9023d71c7742b9a1b9c40f1ef58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1620513430}
+    - target: {fileID: 3053476767735745883, guid: 2286e9023d71c7742b9a1b9c40f1ef58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
     - target: {fileID: 5359147741036869405, guid: 2286e9023d71c7742b9a1b9c40f1ef58, type: 3}
       propertyPath: m_Pivot.x
       value: 0

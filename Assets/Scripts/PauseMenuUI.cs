@@ -5,13 +5,6 @@ public class PauseMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUI; // Reference your UI element
     [SerializeField] private GameObject sceneUI; // Reference your UI element
-    
-    // bool isPause = true;
-
-    // void Update()
-    // {
-  
-    // }
 
     public void Pause(){
         pauseUI.SetActive(true);

@@ -37,6 +37,12 @@ public class PlayerMovement : MonoBehaviour
 
 	void Start ()
 	{
+		string mode = LoadGameData.GetGameMode();
+		int level = mode == "Default"? LoadGameData.GetCurrentLevel() : LoadGameData.GetActiveLevel();
+		
+		speed = (float) (3 + (level * 0.1));
+		rotationSpeed = (float) (170 + (level * 4));
+
 		startPosition = transform.position;
 
 		rb = GetComponent<Rigidbody2D> ();
@@ -205,7 +211,6 @@ public class PlayerMovement : MonoBehaviour
                         {
                             coinAddText.DOFade(0f, 1f).OnComplete(() =>
                             {
-                                // Optional: Destroy or disable the "CoinAdd" GameObject after fading
                                 coinAdd.gameObject.SetActive(false);
                             });
                         }

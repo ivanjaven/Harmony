@@ -5520,6 +5520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aaf2e4e0af66c54ca5c555956332666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainUI: {fileID: 0}
   redBallCollider: {fileID: 1792761862524416470}
   blueBallCollider: {fileID: 966537888231942600}
   playerCollider: {fileID: 7002766834624417833}
