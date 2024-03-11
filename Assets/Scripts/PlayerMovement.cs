@@ -139,12 +139,16 @@ public class PlayerMovement : MonoBehaviour
 						}
 
 						if(level > 1){
+							
+							if(level >= LoadGameData.GetCurrentLevel()) // if the game is not yet finished
+								SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + level * 15); // add coins per level end 
 
-						SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + (level) * 15); // add coins per leve end
+							else
+								SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + level * 2); // add coins per level end 
 
-						Transform coinAdd = mainUI.transform.Find("CoinAdd");
+							Transform coinAdd = mainUI.transform.Find("CoinAdd");
 
-						TransitionAddCoin(coinAdd); // transition the adding of coin in the UI 
+							TransitionAddCoin(coinAdd); // transition the adding of coin in the UI 
 						}
 
             transform.DORotate(Vector3.zero, 1f); // reset the placement of player
@@ -171,8 +175,6 @@ public class PlayerMovement : MonoBehaviour
 				}
 
         int currentLevelIndex = gameMode == "Default"? LoadGameData.GetCurrentLevel() : LoadGameData.GetActiveLevel();
-
-				Debug.Log(currentLevelIndex + 1);
 				
         // if (currentLevelIndex < SceneManager.sceneCountInBuildSettings)
         // {

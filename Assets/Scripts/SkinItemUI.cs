@@ -73,7 +73,7 @@ public class SkinItemUI : MonoBehaviour
 
         if (coinImage != null)
         {
-            // Disable the coing image component
+            // Disable the coin image component
             coinImage.enabled = false;
 
             // Center the price TextMeshPro text
@@ -82,14 +82,13 @@ public class SkinItemUI : MonoBehaviour
             skinPrice.rectTransform.anchoredPosition = newAnchoredPosition;
         }
     }
-    // skinPurchase.interactable = false; 
     itemButton.interactable = false;
   }
 
   public void OnItemPurchase() // Triggered when the item is Purchased
   {
     skinShop.PurchaseSkin(index);
-    skinShop.PopulateShop(); // refreseh the shop display
+    skinShop.PopulateShop(); // refresh the shop display
   }
 
  public void OnClickPurchasedSkin(){

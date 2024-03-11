@@ -1,5 +1,4 @@
 
-using DG.Tweening;
 using UnityEngine;
 
 public class HomeScript : MonoBehaviour
@@ -42,7 +41,6 @@ public class HomeScript : MonoBehaviour
 
             // Call the SetRotationSpeed function of the HomeUnliRotate script and pass 150 to it
             unliRotateScript.SetRotationSpeed(150);
-
 
             // Destroy the existing player
             Destroy(playerObject);
