@@ -40,11 +40,11 @@ public class SkinShop : MonoBehaviour
             }
 
             // Check if skin is purchased and set UI accordingly
-            if (skin.isPurchased)
-            {
+
+            if(PlayerPrefs.GetInt("Skin_" + skin.name + "_Purchased") == 1){
+                skin.isPurchased = true;
                 skinItemUI.SetSkinAsPurchased();
-            }
-            
+            }   
         }
     }
 

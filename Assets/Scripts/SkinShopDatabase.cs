@@ -23,5 +23,21 @@ public class SkinShopDatabase : ScriptableObject
 
     public void PurchaseCharacter (int index){
         skins[index].isPurchased = true;
+        MarkSkinAsPurchased(index);
+    }
+
+      private void SaveSkinData(Skin skin)
+    {
+            PlayerPrefs.SetInt("Skin_" + skin.name + "_Purchased", skin.isPurchased ? 1 : 0);
+
+    }
+
+     public void MarkSkinAsPurchased(int skinIndex)
+    {
+        Skin skin = GetSkin(skinIndex);
+        if (skin.name != null)
+        {
+            SaveSkinData(skin);
+        }
     }
 }
