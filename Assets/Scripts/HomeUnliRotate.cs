@@ -6,7 +6,7 @@ public class HomeUnliRotate : MonoBehaviour
 {
     #region Singleton class: HomeUnliRotate
 
-    [SerializeField] float rotationSpeed;
+    [SerializeField] public float rotationSpeed;
     Rigidbody2D rb;
 
 	#endregion

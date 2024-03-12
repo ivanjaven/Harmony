@@ -1,14 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.Windows.Speech;
 
 public class WinningScene : MonoBehaviour
 {
-    public PlayerObstacleSkinDatabase skinShopDatabase;
     public GameObject mainUI;
     Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
