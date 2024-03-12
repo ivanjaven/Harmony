@@ -17,7 +17,7 @@ public class MainUILevel : MonoBehaviour
 
         if(levelMode == 0) levelMode = 1; // No inital level
 
-        if(levelMode >= LoadGameData.GetCurrentLevel()) reward = levelMode * 15;
+        if(levelMode > LoadGameData.GetCurrentLevel()) reward = levelMode * 15;
         else reward = levelMode * 2;
 
         coinAdd.text = "+" + reward.ToString(); // set the coinAdd text 

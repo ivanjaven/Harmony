@@ -11,11 +11,14 @@ public class PlayerMovement : MonoBehaviour
 	public static PlayerMovement Instance;
 	public GameObject mainUI;
 
+	SoundEffectManager audioManager;
+
 	void Awake ()
 	{
 		if (Instance == null)
 			Instance = this;
 		
+		audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundEffectManager>();
 	}
 
 	#endregion
@@ -40,8 +43,8 @@ public class PlayerMovement : MonoBehaviour
 		string mode = LoadGameData.GetGameMode();
 		int level = mode == "Default"? LoadGameData.GetCurrentLevel() : LoadGameData.GetActiveLevel();
 		
-		speed = (float) (3 + (level * 0.1));
-		rotationSpeed = (float) (170 + (level * 4));
+		speed = (float) (3 + (level * 0.1)); // 3 is the standard speed
+		rotationSpeed = (float) (170 + (level * 4)); // 170 is the standard speed
 
 		startPosition = transform.position;
 
@@ -107,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 		blueBallCollider.enabled = false;
 		rb.angularVelocity = 0f;
 		rb.velocity = Vector2.zero;
+		audioManager.PlaySFX(audioManager.restart);
 
 		//back to start position
 		transform
@@ -135,8 +139,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("LevelEnd"))
         {
 						int level;
-
-						
+			
 						if(LoadGameData.GetGameMode() == "Default")	{
 							level = LoadGameData.GetCurrentLevel();
 						}
@@ -146,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
 						if(level > 1){
 							
-							if(level >= LoadGameData.GetCurrentLevel()) // if the game is not yet finished
+							if(level > LoadGameData.GetCurrentLevel()) // prevent spamming last level for more coins
 								SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + level * 15); // add coins per level end 
 
 							else
