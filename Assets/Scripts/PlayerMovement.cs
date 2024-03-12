@@ -149,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
 						if(level > 1){
 							
-							if(level > LoadGameData.GetCurrentLevel()) // prevent spamming last level for more coins
+							if(level >= LoadGameData.GetCurrentLevel()) // prevent spamming last level for more coins
 								SaveGameData.SetCoinValue(LoadGameData.GetCoinValue() + level * 15); // add coins per level end 
 
 							else
