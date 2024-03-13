@@ -23,6 +23,8 @@ MonoBehaviour:
     playerPrefab: {fileID: 5200380607221316957, guid: dbf7b4870981b7b4ba0045741a687ad1, type: 3}
   - obstacle: {fileID: -6291668305547641344, guid: 3b1ecf7fc1d3cf149af37d2610a645dc, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: 3c367a5d80f992d4b9b3a6fc112d9bbb, type: 3}
+  - obstacle: {fileID: 809334011879600596, guid: a5eeb7f2010d93d4cb48cbed1e811868, type: 3}
+    playerPrefab: {fileID: 5200380607221316957, guid: 0bd01e8b5e1ab4e47bf49fdb1c86f4e2, type: 3}
   - obstacle: {fileID: -2385590082880020357, guid: 7860ac3a3f27358499c0852a34b91c1b, type: 3}
     playerPrefab: {fileID: 5200380607221316957, guid: 21d1b5a91bb8e6048b66835d176e075f, type: 3}
   - obstacle: {fileID: 2954991308336413509, guid: 9c45a12727f3c6b48b4b1fa7e90c58be, type: 3}

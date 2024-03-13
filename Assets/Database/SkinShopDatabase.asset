@@ -48,31 +48,38 @@ MonoBehaviour:
     name: Planet_1
     isPurchased: 0
     index: 4
+  - ball1: {fileID: -8617298133442602265, guid: e3540d28446e56143ae9aa296a461475, type: 3}
+    ball2: {fileID: -5564855896775661652, guid: ef727640b799ab94da05cb4282401a59, type: 3}
+    obstacle: {fileID: 809334011879600596, guid: a5eeb7f2010d93d4cb48cbed1e811868, type: 3}
+    price: 359
+    name: Planet_2
+    isPurchased: 0
+    index: 5
   - ball1: {fileID: 2138967119560405743, guid: 2b996456637250845bd561ca0cc36d37, type: 3}
     ball2: {fileID: -7711945210459846704, guid: 950781e033d00044a950571601dcdf64, type: 3}
     obstacle: {fileID: -2385590082880020357, guid: 7860ac3a3f27358499c0852a34b91c1b, type: 3}
-    price: 349
+    price: 369
     name: Neon_1
     isPurchased: 0
-    index: 5
+    index: 6
   - ball1: {fileID: 5251807389058073492, guid: 77857effa318b114398849c9f9d895be, type: 3}
     ball2: {fileID: -5584573804412160247, guid: d05eff2675522134e993ba149294c5da, type: 3}
     obstacle: {fileID: 2954991308336413509, guid: 9c45a12727f3c6b48b4b1fa7e90c58be, type: 3}
     price: 379
     name: Neon_2
     isPurchased: 0
-    index: 6
+    index: 7
   - ball1: {fileID: 4720295276066710238, guid: 8c03ed2efc4974e4fbcf5091e66fca6f, type: 3}
     ball2: {fileID: -6089468958803453061, guid: 94d9c164ae3f8a14492e0fe6e74aaff1, type: 3}
     obstacle: {fileID: 6366498752464805741, guid: 1138c1a62448edb47b15cf356c1305dd, type: 3}
     price: 399
     name: Fruit_1
     isPurchased: 0
-    index: 7
+    index: 8
   - ball1: {fileID: 2921391037008938526, guid: 46fb05c8a285f23479f6bac7b9483af1, type: 3}
     ball2: {fileID: -1135337825176724731, guid: 180ea2c1247d1eb49bd250bc596d261a, type: 3}
     obstacle: {fileID: -2565506184937685692, guid: 2c14131840e88b8479efbd5bcd07ab2e, type: 3}
     price: 349
     name: Fruit_2
-    isPurchased: 0
-    index: 8
+    isPurchased: 1
+    index: 9
