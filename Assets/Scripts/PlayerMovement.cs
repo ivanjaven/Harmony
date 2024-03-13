@@ -160,6 +160,7 @@ public class PlayerMovement : MonoBehaviour
 							TransitionAddCoin(coinAdd); // transition the adding of coin in the UI 
 						}
 
+
             transform.DORotate(Vector3.zero, 1f); // reset the placement of player
 						
             Destroy(other.gameObject);
