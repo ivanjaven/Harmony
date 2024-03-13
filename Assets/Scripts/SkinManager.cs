@@ -68,7 +68,7 @@ public class SkinManager : MonoBehaviour
                     string obstacleName = obstaclePrefab.name.ToLower(); // Convert to lower case for case-insensitive comparison
 
                     // Check if the name contains "closing" or "block"
-                    if (obstacleName.Contains("closing") || obstacleName.Contains("block"))
+                    if (obstacleName.Contains("closing"))
                     {
                         // Change the sprite of the obstacle prefab's children
                         foreach (Transform childTransform in obstacleTransform)
