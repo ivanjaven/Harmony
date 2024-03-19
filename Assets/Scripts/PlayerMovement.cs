@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 		int level = mode == "Default"? LoadGameData.GetCurrentLevel() : LoadGameData.GetActiveLevel();
 		
 		speed = (float) (3 + (level * 0.1)); // 3 is the standard speed
-		rotationSpeed = (float) (170 + (level * 4)); // 170 is the standard speed
+		rotationSpeed = (float) (170 + (level * 4)); // 170 is the standard rotation speed
 
 		startPosition = transform.position;
 

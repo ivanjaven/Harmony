@@ -42,7 +42,20 @@ public class ObstacleGenerator : MonoBehaviour
         GameObject obstaclePrefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
         float randomXOffset = Random.Range(-spawnXOffsetRange, spawnXOffsetRange);
         Vector3 spawnPosition = lastSpawnPosition + new Vector3(randomXOffset, spawnYGap, 0);
-        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+
+        // Find or create the "Obstacles" game object
+        GameObject obstacleContainer = GameObject.Find("Obstacles");
+        if (obstacleContainer == null)
+        {
+            obstacleContainer = new GameObject("Obstacles");
+        }
+
+        // Instantiate the obstacle prefab
+        GameObject newObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+
+        // Set the parent of the new obstacle to the "Obstacles" game object
+        newObstacle.transform.parent = obstacleContainer.transform;
+
         lastSpawnPosition = spawnPosition;
     }
 
