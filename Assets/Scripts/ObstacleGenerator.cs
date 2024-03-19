@@ -3,6 +3,8 @@ using UnityEngine;
 public class ObstacleGenerator : MonoBehaviour
 {
     public GameObject[] obstaclePrefabs;
+
+    public SkinManager skinManager;
     public Transform spawnPoint;
     public float spawnInterval = 1f;
     public float spawnHeightOffset = 1f;
@@ -27,6 +29,7 @@ public class ObstacleGenerator : MonoBehaviour
         if (Time.time >= nextSpawnTime)
         {
             SpawnObstacle();
+            skinManager.ChangeObstacleSprites();
             nextSpawnTime = Time.time + spawnInterval;
         }
 
